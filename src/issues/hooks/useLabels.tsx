@@ -15,6 +15,40 @@ export const useLabels = () => {
     queryKey: ["labels"],
     queryFn: getLabels,
     staleTime: 1000 * 60 * 60,
+    /*     initialData:[  {
+      id: 6344006318,
+      node_id: "LA_kwDOAJy2Ks8AAAABeiHarg",
+      url: "https://api.github.com/repos/facebook/react/labels/fb-exported",
+      name: "fb-exported",
+      color: "ededed",
+      default: false,
+    },
+    {
+      id: 52079258,
+      node_id: "MDU6TGFiZWw1MjA3OTI1OA==",
+      url: "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+      name: "Difficulty: starter",
+      color: "94ce52",
+      default: false
+    },], */
+    placeholderData: [
+      {
+        id: 6344006318,
+        node_id: "LA_kwDOAJy2Ks8AAAABeiHarg",
+        url: "https://api.github.com/repos/facebook/react/labels/fb-exported",
+        name: "fb-exported",
+        color: "ededed",
+        default: false,
+      },
+      {
+        id: 52079258,
+        node_id: "MDU6TGFiZWw1MjA3OTI1OA==",
+        url: "https://api.github.com/repos/facebook/react/labels/Difficulty:%20starter",
+        name: "Difficulty: starter",
+        color: "94ce52",
+        default: false,
+      },
+    ],
   });
   return labelsQuery;
 };
