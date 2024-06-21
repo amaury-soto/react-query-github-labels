@@ -10,8 +10,7 @@ const getLabels = async (): Promise<Label[]> => {
       Authorization: null,
     },
   });
-
-  console.log("data1", data);
+ // console.log("data labels:", data);
   return data;
 };
 export const useLabels = () => {

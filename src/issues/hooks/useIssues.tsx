@@ -9,7 +9,7 @@ const getIssues = async (): Promise<Issue[]> => {
       Authorization: null,
     },
   });
-  console.log("data issue", data);
+ // console.log("data issues::", data);
   return data;
 };
 
