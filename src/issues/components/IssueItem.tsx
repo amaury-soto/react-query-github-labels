@@ -23,22 +23,16 @@ export const IssueItem: FC<Props> = ({ issue }) => {
     });
   };
 
-  const preSetData =()=>{
-    console.log('hola')
-    queryClient.setQueryData(
-      ["issue", issue.number],
-      issue, 
-    {
-      updatedAt: new Date().getTime() + 100000
-    }
-
-    )
-  }
+  const preSetData = () => {
+    queryClient.setQueryData(["issue", issue.number], issue, {
+      updatedAt: new Date().getTime() + 100000,
+    });
+  };
   return (
     <div
       className="card mb-2 issue"
       onClick={() => navigate(`/issues/issue/${issue.number}`)}
-      onMouseEnter={preSetData}
+      onMouseEnter={prefetchData}
     >
       <div className="card-body d-flex align-items-center">
         {issue.state === State.Open ? (
